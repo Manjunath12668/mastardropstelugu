@@ -1,0 +1,129 @@
+/* Footer Base */
+.footer {
+    background: #fff;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;                 /* important for small screens */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section heading */
+.footer-section h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
+
+/* Disclaimer text */
+.footer-disclaimer {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    padding: 15px 20px;               /* responsive padding */
+    max-width: 1000px;                /* limits width on large screens */
+    margin: auto;
+}
+.admlogin{
+    text-decoration: none;
+    color: #555;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    color: #5c5a5a;
+}
+
+/* Social icons */
+.social-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-img img {
+    width: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+
+.social-img img:hover {
+    transform: scale(1.1);
+}
+
+/* Back to top button */
+.back-to-top {
+    margin-top: -5px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.back-to-top:hover {
+    cursor: pointer;
+    background-color: coral;
+}
+/* .admlogin{
+    text-decoration: none;
+
+} */
+
+/* ===================== */
+/* 📱 Mobile (max 480px) */
+/* ===================== */
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-disclaimer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .social-img img {
+        width: 26px;
+    }
+}
+
+/* ===================== */
+/* 📱 Tablet (max 768px) */
+/* ===================== */
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-disclaimer {
+        padding: 12px 30px;
+    }
+}
+
+/* ===================== */
+/* 🖥 Desktop (1024px+) */
+/* ===================== */
+@media (min-width: 1024px) {
+    .footer-container {
+        gap: 40px;
+    }
+
+    .footer-disclaimer {
+        font-size: 13px;
+    }
+}

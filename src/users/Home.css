@@ -1,0 +1,49 @@
+#top h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 20px;
+    display: flex;
+}
+#top h2 p{
+    margin: 5px 0px 0px 5px;    
+}
+/* .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+} */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 🔥 5 per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Very small phones */
+/* @media (max-width: 360px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+} */
