@@ -60,7 +60,7 @@ export default function Navbar({ onSearch }) {
 
         <div className="search-wrapper">
           <div className="downarrow">
-            <a href="#footer-site">↓</a>
+            <a href="#footer-site">👇</a>
           </div>
 
           <input
