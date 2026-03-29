@@ -5,7 +5,7 @@ import ProductCard from "./components/ProductCard/ProductCard";
 import "./Home.css";
 
 // Products images
-import Product1 from "./assets/productsimg/Facebook.jpg";
+// import Product1 from "./assets/productsimg/Facebook.jpg";
 
 
 export default function Home() {
