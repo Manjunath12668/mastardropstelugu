@@ -18,6 +18,12 @@ export default function Home() {
       product_name: "Backflow Smoke Fountain Shivaling",
       product_image: "https://m.media-amazon.com/images/I/61xd8Xq-clL._SL1500_.jpg",
       product_link: "https://amzn.to/4lROa9C"
+    },
+     {
+      serial_id: 102,
+      product_name: "Noise Smart Watch ColorFit",
+      product_image: "https://m.media-amazon.com/images/I/61epn29QG0L._SL1500_.jpg",
+      product_link: "https://amzn.to/3Example2"
     }
     
   ], []);
