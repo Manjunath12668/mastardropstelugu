@@ -18,6 +18,12 @@ export default function Home() {
       product_name: "Backflow Smoke Fountain Shivaling",
       product_image: "https://m.media-amazon.com/images/I/61xd8Xq-clL._SL1500_.jpg",
       product_link: "https://amzn.to/4sy89Nc"
+    },
+    {
+      serial_id: 2,
+      product_name: "Masala Rack Set 18 Glass Jar",
+      product_image: "https://m.media-amazon.com/images/I/719wLAwglvL._SL1500_.jpg",
+      product_link: "https://amzn.to/4tm4ZMG"
     }
   ], []);
 
