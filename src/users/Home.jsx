@@ -7,53 +7,54 @@ import "./Home.css";
 export default function Home() {
   const [search, setSearch] = useState("");
 
+  // Product list
   const products = useMemo(() => [
+    
     {
-      serial_id: 1,
-      product_name: "Backflow Smoke Fountain Shivaling",
-      product_image: "https://m.media-amazon.com/images/I/61xd8Xq-clL._SL1500_.jpg",
-      product_link: "https://amzn.to/4sy89Nc"
+      serial_id: 3,
+      product_name: "Foldable Camping Light",
+      product_image: "https://m.media-amazon.com/images/I/61kMSLn7k9L._SL1500_.jpg",
+      product_link: "https://amzn.to/3OacLdC",
     },
     {
       serial_id: 2,
       product_name: "Masala Rack Set 18 Glass Jar",
       product_image: "https://m.media-amazon.com/images/I/719wLAwglvL._SL1500_.jpg",
-      product_link: "https://amzn.to/4tm4ZMG"
+      product_link: "https://amzn.to/4tm4ZMG",
     },
     {
-      serial_id: 3,
-      product_name: "Foldable Camping Light",
-      product_image: "https://m.media-amazon.com/images/I/61kMSLn7k9L._SL1500_.jpg",
-      product_link: "https://amzn.to/3OacLdC"
+      serial_id: 1,
+      product_name: "Backflow Smoke Fountain Shivaling",
+      product_image: "https://m.media-amazon.com/images/I/61xd8Xq-clL._SL1500_.jpg",
+      product_link: "https://amzn.to/4sy89Nc",
     }
   ], []);
 
-  // 🔥 SEARCH + SORT (LATEST FIRST)
+  // 🔥 Live search filter
   const filteredProducts = useMemo(() => {
     const text = search.trim().toLowerCase();
 
-    let filtered = products;
+    if (!text) return products;
 
-    if (text) {
-      filtered = products.filter((p) =>
-        p.product_name.toLowerCase().includes(text) ||
-        String(p.serial_id).includes(text)
-      );
-    }
-
-    // ✅ IMPORTANT: Sort descending (latest on top)
-    return [...filtered].sort((a, b) => b.serial_id - a.serial_id);
-
+    return products.filter((p) =>
+      p.product_name.toLowerCase().includes(text) ||
+      String(p.serial_id).includes(text)
+    );
   }, [search, products]);
 
   return (
     <div>
+      {/* Navbar */}
       <Navbar onSearch={setSearch} />
 
+      {/* Header */}
       <div id="top">
-        <h2>Latest Drops <p>↴</p></h2>
+        <h2>
+          Latest Drops <p>↴</p>
+        </h2>
       </div>
 
+      {/* Products Grid */}
       <div className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((p) => (
@@ -64,6 +65,7 @@ export default function Home() {
         )}
       </div>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
