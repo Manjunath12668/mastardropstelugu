@@ -4,15 +4,10 @@ import Footer from "./components/Footer/Footer";
 import ProductCard from "./components/ProductCard/ProductCard";
 import "./Home.css";
 
-// Products images
-// import Product1 from "./assets/productsimg/Facebook.jpg";
-
-
 export default function Home() {
   const [search, setSearch] = useState("");
 
   const products = useMemo(() => [
-    
     {
       serial_id: 1,
       product_name: "Backflow Smoke Fountain Shivaling",
@@ -27,33 +22,33 @@ export default function Home() {
     },
     {
       serial_id: 3,
-      product_name: " Foldable Camping Light",
+      product_name: "Foldable Camping Light",
       product_image: "https://m.media-amazon.com/images/I/61kMSLn7k9L._SL1500_.jpg",
       product_link: "https://amzn.to/3OacLdC"
     }
   ], []);
 
-  // 🔥 LIVE SEARCH FILTER
+  // 🔥 SEARCH + SORT (LATEST FIRST)
   const filteredProducts = useMemo(() => {
-  const text = search.trim().toLowerCase();
+    const text = search.trim().toLowerCase();
 
-  let filtered = products;
+    let filtered = products;
 
-  if (text) {
-    filtered = products.filter((p) =>
-      p.product_name.toLowerCase().includes(text) ||
-      String(p.serial_id).includes(text)
-    );
-  }
+    if (text) {
+      filtered = products.filter((p) =>
+        p.product_name.toLowerCase().includes(text) ||
+        String(p.serial_id).includes(text)
+      );
+    }
 
-  // 🔥 SORT DESCENDING (latest first)
-  return [...filtered].sort((a, b) => b.serial_id - a.serial_id);
+    // ✅ IMPORTANT: Sort descending (latest on top)
+    return [...filtered].sort((a, b) => b.serial_id - a.serial_id);
 
-}, [search, products]);
+  }, [search, products]);
 
   return (
     <div>
-      <Navbar onSearch={setSearch}  />
+      <Navbar onSearch={setSearch} />
 
       <div id="top">
         <h2>Latest Drops <p>↴</p></h2>
