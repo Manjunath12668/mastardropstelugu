@@ -34,7 +34,7 @@
   z-index: 2;
 }
 
-/* Product title */
+/* Product title banner */
 .product-title-banner a {
   position: absolute;
   bottom: 0;
@@ -57,13 +57,14 @@
   text-decoration: none;
 }
 
-/* 🔥 Better auto scaling inside media */
+/* 🔥 AUTO TEXT FIT */
 .auto-text {
   display: block;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
 
-  font-size: 22px; /* default */
+  font-size: 22px; /* default (JS will adjust) */
   line-height: 1.1;
 }
 
@@ -119,6 +120,7 @@
 
   .product-title-banner a {
     height: 34px;
+    padding: 5px;
   }
 
   .auto-text {
@@ -141,6 +143,7 @@
 
   .product-title-banner a {
     height: 32px;
+    padding: 4px;
   }
 
   .auto-text {
