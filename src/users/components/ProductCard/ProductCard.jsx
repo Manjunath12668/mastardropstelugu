@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
     if (!el) return;
 
     let fontSize = 22;        // start big
-    const minFontSize = 8;   // 🔥 allow smaller for mobile
+    const minFontSize = 9;   // 🔥 allow smaller for mobile
 
     el.style.fontSize = fontSize + "px";
 
