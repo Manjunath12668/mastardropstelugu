@@ -39,7 +39,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* padding: 6px; */
+  padding: 1px;
   background: linear-gradient(100deg, #000000, #068199);
   color: #fff;
   font-weight: 900;
