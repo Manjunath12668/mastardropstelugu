@@ -1,15 +1,15 @@
 .product-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Image wrapper (auto height) */
+/* Image wrapper */
 .image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* 🔥 auto square */
+  height: 260px;
 }
 
 /* Product Image */
@@ -23,51 +23,145 @@
 /* Serial badge */
 .serial-badge {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   background: #ffd84d;
   color: #000;
   font-weight: bold;
-
-  /* 🔥 auto font scaling */
-  font-size: clamp(10px, 1.2vw, 14px);
-  padding: clamp(3px, 0.5vw, 6px) clamp(6px, 1vw, 10px);
-  border-radius: 4px;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 3px;
   z-index: 2;
 }
 
-/* Product name banner */
+/* Product title */
 .product-title-banner a {
   position: absolute;
   bottom: 0;
   width: 100%;
-
-  padding: clamp(4px, 0.8vw, 8px);
+  padding: 6px;
   background: linear-gradient(100deg, #000000, #068199);
   color: #fff;
-
   font-weight: 900;
+  border-top: 1px solid #fff;
   text-transform: uppercase;
   font-style: italic;
   text-align: center;
 
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: clamp(30px, 5vw, 42px);
   overflow: hidden;
   text-decoration: none;
 }
 
-/* 🔥 Auto font resize */
+/* 🔥 Better auto scaling inside media */
 .auto-text {
   display: block;
   white-space: nowrap;
   overflow: hidden;
 
-  /* 🔥 MAGIC LINE */
-  font-size: clamp(12px, 2vw, 22px);
-
+  font-size: 22px; /* default */
   line-height: 1.1;
+}
+
+
+/* ===================== */
+/* LARGE TABLETS (≤1024px) */
+/* ===================== */
+@media (max-width: 1024px) {
+
+  .image-wrapper {
+    height: 220px;
+  }
+
+  .auto-text {
+    font-size: 20px;
+  }
+
+  .serial-badge {
+    font-size: 13px;
+  }
+}
+
+/* ===================== */
+/* TABLETS (≤768px) */
+/* ===================== */
+@media (max-width: 768px) {
+
+  .image-wrapper {
+    height: 200px;
+  }
+
+  .product-title-banner a {
+    height: 36px;
+  }
+
+  .auto-text {
+    font-size: 18px;
+  }
+
+  .serial-badge {
+    font-size: 12px;
+  }
+}
+
+/* ===================== */
+/* MOBILE LARGE (≤600px) */
+/* ===================== */
+@media (max-width: 600px) {
+
+  .image-wrapper {
+    height: 180px;
+  }
+
+  .product-title-banner a {
+    height: 34px;
+  }
+
+  .auto-text {
+    font-size: 16px;
+  }
+
+  .serial-badge {
+    font-size: 11px;
+  }
+}
+
+/* ===================== */
+/* MOBILE SMALL (≤480px) */
+/* ===================== */
+@media (max-width: 480px) {
+
+  .image-wrapper {
+    height: 170px;
+  }
+
+  .product-title-banner a {
+    height: 32px;
+  }
+
+  .auto-text {
+    font-size: 14px;
+  }
+
+  .serial-badge {
+    font-size: 10px;
+  }
+}
+
+/* ===================== */
+/* VERY SMALL DEVICES (≤360px) */
+/* ===================== */
+@media (max-width: 360px) {
+
+  .image-wrapper {
+    height: 150px;
+  }
+
+  .auto-text {
+    font-size: 13px;
+  }
 }
