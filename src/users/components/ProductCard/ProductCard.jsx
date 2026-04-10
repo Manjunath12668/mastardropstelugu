@@ -8,13 +8,17 @@ export default function ProductCard({ product }) {
     const el = textRef.current;
     if (!el) return;
 
-    let fontSize = 22;
+    let fontSize = 22;        // start big
+    const minFontSize = 10;   // 🔥 allow smaller for mobile
+
     el.style.fontSize = fontSize + "px";
 
-    while (el.scrollWidth > el.clientWidth && fontSize > 12) {
+    // 🔥 reduce font until it fits
+    while (el.scrollWidth > el.clientWidth && fontSize > minFontSize) {
       fontSize -= 1;
       el.style.fontSize = fontSize + "px";
     }
+
   }, [product.product_name]);
 
   return (
