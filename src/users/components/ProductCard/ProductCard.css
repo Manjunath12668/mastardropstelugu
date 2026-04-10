@@ -39,7 +39,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0.5px;
+  padding: 0.1px;
   background: linear-gradient(100deg, #000000, #068199);
   color: #fff;
   font-weight: 900;
@@ -56,7 +56,6 @@
   overflow: hidden;
   text-decoration: none;
 }
-
 /* 🔥 AUTO TEXT FIT */
 .auto-text {
   display: block;
@@ -77,11 +76,9 @@
   .image-wrapper {
     height: 220px;
   }
-
   .auto-text {
     font-size: 20px;
   }
-
   .serial-badge {
     font-size: 13px;
   }
@@ -95,15 +92,12 @@
   .image-wrapper {
     height: 200px;
   }
-
   .product-title-banner a {
     height: 36px;
   }
-
   .auto-text {
     font-size: 18px;
   }
-
   .serial-badge {
     font-size: 12px;
   }
@@ -117,16 +111,13 @@
   .image-wrapper {
     height: 180px;
   }
-
   .product-title-banner a {
     height: 34px;
     /* padding: 5px; */
   }
-
   .auto-text {
     font-size: 16px;
   }
-
   .serial-badge {
     font-size: 11px;
   }
