@@ -35,13 +35,21 @@ export default function Home() {
 
   // 🔥 LIVE SEARCH FILTER
   const filteredProducts = useMemo(() => {
-    const text = search.trim().toLowerCase();
-    if (!text) return products;
+  const text = search.trim().toLowerCase();
 
-    return products.filter((p) =>
+  let filtered = products;
+
+  if (text) {
+    filtered = products.filter((p) =>
       p.product_name.toLowerCase().includes(text) ||
-      String(p.serial_id).includes(text)    );
-  }, [search, products]);
+      String(p.serial_id).includes(text)
+    );
+  }
+
+  // 🔥 SORT DESCENDING (latest first)
+  return [...filtered].sort((a, b) => b.serial_id - a.serial_id);
+
+}, [search, products]);
 
   return (
     <div>
