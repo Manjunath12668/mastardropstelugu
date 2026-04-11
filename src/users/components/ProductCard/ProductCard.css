@@ -63,7 +63,7 @@
   overflow: hidden;
   width: 100%;
 
-  font-size: 22px; /* default (JS will adjust) */
+  font-size: 24px; /* default (JS will adjust) */
   line-height: 1.1;
 }
 
