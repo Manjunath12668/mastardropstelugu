@@ -11,6 +11,12 @@ export default function Home() {
   const products = useMemo(() => [
     
     {
+      serial_id: 4,
+      product_name: "2 in 1 vegetable peeler",
+      product_image: "https://m.media-amazon.com/images/I/61WJX+XPsdL._SL1024_.jpg",
+      product_link: "https://amzn.to/4mxlMtO",
+    },    
+    {
       serial_id: 3,
       product_name: "Foldable Camping Light",
       product_image: "https://m.media-amazon.com/images/I/61kMSLn7k9L._SL1500_.jpg",
