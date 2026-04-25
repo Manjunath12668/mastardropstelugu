@@ -9,7 +9,12 @@ export default function Home() {
 
   // Product list
   const products = useMemo(() => [
-    
+      {
+      serial_id: 5,
+      product_name: "Electric Egg Boiler",
+      product_image: "https://m.media-amazon.com/images/I/71p1L3X-ViL._SL1500_.jpg",
+      product_link: "https://amzn.to/4e4AEOh",
+    },  
     {
       serial_id: 4,
       product_name: "2 in 1 vegetable peeler",
