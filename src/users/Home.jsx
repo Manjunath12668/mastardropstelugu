@@ -12,7 +12,7 @@ export default function Home() {
       {
       serial_id: 5,
       product_name: "Electric Egg Boiler",
-      product_image: "https://m.media-amazon.com/images/I/71p1L3X-ViL._SL1500_.jpg",
+      product_image: "https://m.media-amazon.com/images/I/51UbJD2+y9L._SL1080_.jpg",
       product_link: "https://amzn.to/4e4AEOh",
     },  
     {
